@@ -1,72 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily Mood Quote</title>
-<style>
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: white;
-    padding: 20px;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joquotez</title>
 
-h1 {
-    margin-top: 30px;
-}
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      padding: 20px;
+    }
 
-#quoteBox {
-    margin-top: 40px;
-    font-size: 20px;
-    padding: 25px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 15px;
-}
+    h1 {
+      margin-top: 30px;
+    }
 
-button {
-    padding: 10px 18px;
-    margin: 8px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 14px;
-}
-</style>
+    button {
+      padding: 10px 18px;
+      margin: 8px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    #quoteBox {
+      margin-top: 40px;
+      font-size: 20px;
+      padding: 25px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>🌟 Your Quote for Today 🌟</h1>
+  <h1>🌟 Your Quote for Today 🌟</h1>
 
-<div id="quoteBox">Loading today's inspiration...</div>
+  <h3>How are you feeling today?</h3>
 
-<script>
+  <div>
+    <button onclick="showMoodQuote('happy')">😊 Happy</button>
+    <button onclick="showMoodQuote('sad')">😔 Sad</button>
+    <button onclick="showMoodQuote('faith')">🙏 Faith</button>
+    <button onclick="showMoodQuote('motivation')">💪 Motivational</button>
+  </div>
 
-const quotes = [
-"Wake up with purpose. Sleep with satisfaction.",
-"God is preparing you for something greater.",
-"Small progress is still progress.",
-"Discipline creates destiny.",
-"Don’t quit. Your breakthrough is near.",
-"Faith over fear.",
-"Your story is still being written.",
-"Rise. Pray. Conquer.",
-"Hard work beats talent when talent doesn’t work hard.",
-"Trust the process."
-];
+  <div id="quoteBox">
+    Select your mood to see your quote ✨
+  </div>
 
-// Get today's number (changes daily)
-const today = new Date();
-const dayNumber = today.getDate() + today.getMonth() * 31 + today.getFullYear();
+  <script>
+    const quotes = {
+      happy: [
+        "Keep smiling, life is beautiful!",
+        "Happiness looks good on you!",
+        "Shine bright like your joy!"
+      ],
+      sad: [
+        "Tough times don’t last, tough people do.",
+        "It’s okay to not be okay.",
+        "Every storm runs out of rain."
+      ],
+      faith: [
+        "God’s plan is always greater.",
+        "Pray more, worry less.",
+        "Faith makes things possible."
+      ],
+      motivation: [
+        "Discipline builds destiny.",
+        "Push yourself, no one else will.",
+        "Dream big. Work hard."
+      ]
+    };
 
-// Pick quote based on day
-const quoteIndex = dayNumber % quotes.length;
-
-document.getElementById("quoteBox").innerText = quotes[quoteIndex];
-
-</script>
+    function showMoodQuote(mood) {
+      const moodQuotes = quotes[mood];
+      const randomIndex = Math.floor(Math.random() * moodQuotes.length);
+      document.getElementById("quoteBox").innerText = moodQuotes[randomIndex];
+    }
+  </script>
 
 </body>
 </html>
