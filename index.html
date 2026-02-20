@@ -1,111 +1,122 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joquotez 👑</title>
-
+  <title>Joquotez</title>
   <style>
     body {
+      margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
       text-align: center;
-      color: #f5e6c8;
-      padding: 20px;
-      background: linear-gradient(135deg, #000000, #1a1a1a, #2b2b2b);
+      background: linear-gradient(135deg, #000000, #1a1a1a);
+      color: gold;
     }
 
     h1 {
-      margin-top: 30px;
-      font-size: 28px;
-      color: #ffd700;
-      text-shadow: 0 0 10px rgba(255,215,0,0.7);
+      margin-top: 40px;
+      font-size: 40px;
+      letter-spacing: 2px;
     }
 
-    h3 {
-      margin-top: 20px;
-      color: #f5e6c8;
+    .buttons {
+      margin-top: 30px;
     }
 
     button {
+      background: black;
+      color: gold;
+      border: 2px solid gold;
       padding: 12px 20px;
-      margin: 10px;
-      border: none;
-      border-radius: 25px;
+      margin: 8px;
+      font-size: 16px;
       cursor: pointer;
-      font-size: 14px;
-      font-weight: bold;
-      background: linear-gradient(145deg, #b8860b, #ffd700);
-      color: black;
-      box-shadow: 0px 4px 12px rgba(255, 215, 0, 0.6);
+      border-radius: 8px;
       transition: 0.3s;
     }
 
     button:hover {
-      transform: scale(1.08);
-      box-shadow: 0px 6px 18px rgba(255, 215, 0, 0.9);
+      background: gold;
+      color: black;
     }
 
     #quoteBox {
-      margin-top: 50px;
-      font-size: 22px;
-      padding: 30px;
-      background: linear-gradient(145deg, #b8860b, #ffd700);
-      color: black;
-      border-radius: 20px;
-      box-shadow: 0px 0px 25px rgba(255, 215, 0, 0.7);
-      min-height: 60px;
+      margin: 40px auto;
+      width: 80%;
+      max-width: 600px;
+      padding: 25px;
+      border: 2px solid gold;
+      border-radius: 15px;
+      font-size: 18px;
+      line-height: 1.6;
+      background-color: rgba(0,0,0,0.7);
+      box-shadow: 0 0 20px gold;
+      white-space: pre-line;
     }
 
-    .footer {
-      margin-top: 60px;
+    footer {
+      margin-top: 50px;
       font-size: 14px;
-      color: #888;
+      color: gold;
+      opacity: 0.7;
     }
   </style>
 </head>
 
 <body>
 
-  <h1>👑 Your Royal Quote 👑</h1>
+  <h1>JOQUOTEZ 👑</h1>
 
-  <h3>Choose your mood today:</h3>
-
-  <div>
-    <button onclick="showMoodQuote('happy')">😊 Happy</button>
-    <button onclick="showMoodQuote('sad')">😔 Sad</button>
-    <button onclick="showMoodQuote('faith')">🙏 Faith</button>
-    <button onclick="showMoodQuote('motivation')">💪 Motivational</button>
+  <div class="buttons">
+    <button onclick="showMoodQuote('happy')">Happy 😊</button>
+    <button onclick="showMoodQuote('sad')">Sad 😔</button>
+    <button onclick="showMoodQuote('faith')">Faith 🙏</button>
+    <button onclick="showMoodQuote('motivation')">Motivation 🔥</button>
+    <button onclick="showMoodQuote('love')">Love ❤️</button>
   </div>
 
   <div id="quoteBox">
-    Select your mood to receive your royal message ✨
+    Choose your mood above ✨
   </div>
 
-  <div class="footer">
-    Created by Joonathan 👑
-  </div>
+  <footer>
+    Created by Joonathan
+  </footer>
 
   <script>
     const quotes = {
       happy: [
-        "Your joy is your power. Shine boldly.",
-        "Happiness is royalty of the heart.",
-        "Smile like a king today."
+        "Your smile changes rooms.",
+        "Joy looks powerful on you.",
+        "Today is yours to shine.",
+        "Happiness is a decision — choose it."
       ],
+
       sad: [
-        "Even kings face storms. Stand strong.",
-        "This chapter will make you stronger.",
-        "Pain builds royal character."
+        "This pain is shaping strength.",
+        "You survived 100% of your worst days.",
+        "Tears water future victories.",
+        "Storms don’t last forever."
       ],
+
       faith: [
-        "God crowns those who trust Him.",
-        "Faith is your golden armor.",
-        "With God, you reign victorious."
+        "📖 Philippians 4:13\n'I can do all things through Christ who strengthens me.'\n\nYou are empowered.",
+        "📖 Isaiah 41:10\n'Fear not, for I am with you.'\n\nYou are never alone.",
+        "📖 Jeremiah 29:11\n'For I know the plans I have for you.'\n\nYour future is blessed.",
+        "📖 Psalm 23:1\n'The Lord is my shepherd; I shall not want.'\n\nYou lack nothing."
       ],
+
       motivation: [
-        "Discipline builds dynasties.",
-        "Act like royalty. Work like a warrior.",
-        "Your crown is earned daily."
+        "Discipline creates destiny.",
+        "Win in silence.",
+        "Built different. Move different.",
+        "Execution beats excuses."
+      ],
+
+      love: [
+        "Real love feels like peace.",
+        "Chosen — not forced.",
+        "Healthy love never confuses you.",
+        "You deserve intentional love."
       ]
     };
 
