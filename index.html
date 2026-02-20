@@ -3,45 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joquotez</title>
+  <title>Joquotez 👑</title>
 
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
+      color: #f5e6c8;
       padding: 20px;
+      background: linear-gradient(135deg, #000000, #1a1a1a, #2b2b2b);
     }
 
     h1 {
       margin-top: 30px;
+      font-size: 28px;
+      color: #ffd700;
+      text-shadow: 0 0 10px rgba(255,215,0,0.7);
+    }
+
+    h3 {
+      margin-top: 20px;
+      color: #f5e6c8;
     }
 
     button {
-      padding: 10px 18px;
-      margin: 8px;
+      padding: 12px 20px;
+      margin: 10px;
       border: none;
-      border-radius: 20px;
+      border-radius: 25px;
       cursor: pointer;
       font-size: 14px;
+      font-weight: bold;
+      background: linear-gradient(145deg, #b8860b, #ffd700);
+      color: black;
+      box-shadow: 0px 4px 12px rgba(255, 215, 0, 0.6);
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.08);
+      box-shadow: 0px 6px 18px rgba(255, 215, 0, 0.9);
     }
 
     #quoteBox {
-      margin-top: 40px;
-      font-size: 20px;
-      padding: 25px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 15px;
+      margin-top: 50px;
+      font-size: 22px;
+      padding: 30px;
+      background: linear-gradient(145deg, #b8860b, #ffd700);
+      color: black;
+      border-radius: 20px;
+      box-shadow: 0px 0px 25px rgba(255, 215, 0, 0.7);
+      min-height: 60px;
+    }
+
+    .footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #888;
     }
   </style>
 </head>
 
 <body>
 
-  <h1>🌟 Your Quote for Today 🌟</h1>
+  <h1>👑 Your Royal Quote 👑</h1>
 
-  <h3>How are you feeling today?</h3>
+  <h3>Choose your mood today:</h3>
 
   <div>
     <button onclick="showMoodQuote('happy')">😊 Happy</button>
@@ -51,30 +78,34 @@
   </div>
 
   <div id="quoteBox">
-    Select your mood to see your quote ✨
+    Select your mood to receive your royal message ✨
+  </div>
+
+  <div class="footer">
+    Created by Joonathan 👑
   </div>
 
   <script>
     const quotes = {
       happy: [
-        "Keep smiling, life is beautiful!",
-        "Happiness looks good on you!",
-        "Shine bright like your joy!"
+        "Your joy is your power. Shine boldly.",
+        "Happiness is royalty of the heart.",
+        "Smile like a king today."
       ],
       sad: [
-        "Tough times don’t last, tough people do.",
-        "It’s okay to not be okay.",
-        "Every storm runs out of rain."
+        "Even kings face storms. Stand strong.",
+        "This chapter will make you stronger.",
+        "Pain builds royal character."
       ],
       faith: [
-        "God’s plan is always greater.",
-        "Pray more, worry less.",
-        "Faith makes things possible."
+        "God crowns those who trust Him.",
+        "Faith is your golden armor.",
+        "With God, you reign victorious."
       ],
       motivation: [
-        "Discipline builds destiny.",
-        "Push yourself, no one else will.",
-        "Dream big. Work hard."
+        "Discipline builds dynasties.",
+        "Act like royalty. Work like a warrior.",
+        "Your crown is earned daily."
       ]
     };
 
